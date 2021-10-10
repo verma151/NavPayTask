@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/purple_700"
+    android:layout_height="match_parent"
+    tools:context=".MainScreen">
+
+
+
+    <RelativeLayout
+        android:id="@+id/appBarlayout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dots"
+            android:padding="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
+            android:padding="5dp"
+            android:onClick="back"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            />
+
+
+    </RelativeLayout>
+
+    <com.example.navpaytask.CustomScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:scrollbars="vertical"
+        android:layout_below="@id/appBarlayout"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/user_layout"
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/profile_image"
+                    android:layout_alignBottom="@id/profile_image"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toStartOf="@id/profile_image"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/userNameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="Jay Sethi"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/upiTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="reachjaysethi-1@oksbi"
+                        android:textColor="@color/white1"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/person"
+                    app:civ_border_width="0dp" />
+            </RelativeLayout>
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_layout"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+                <TextView
+                    android:id="@+id/frequest_users"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FREQUENTLY CONTACTED"
+                    android:textColor="@color/white1"
+                    android:layout_marginStart="10dp"
+                    android:textSize="13sp"
+                    android:visibility="gone"
+                    />
+                <TableRow  android:padding="10dp">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/user1"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:onClick="name1"
+                            android:src="@drawable/person"
+                            android:text="Player"
+                            app:civ_border_width="0dp" />
+
+                        <TextView
+                            android:id="@+id/user1TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/user1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="10dp"
+                            android:text="Harshada"
+                            android:textAlignment="center"
+                            android:textColor="@color/white1"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/user2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:onClick="name2"
+                            android:src="@drawable/person"
+                            android:text="Player"
+                            app:civ_border_width="0dp" />
+
+                        <TextView
+                            android:id="@+id/user2TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/user2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="10dp"
+                            android:text="Naveen"
+                            android:textAlignment="center"
+                            android:textColor="@color/white1"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/user3"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:onClick="name3"
+                            android:src="@drawable/person"
+                            android:text="Player"
+                            app:civ_border_width="0dp" />
+
+                        <TextView
+                            android:id="@+id/user3TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/user3"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="10dp"
+                            android:text="Vivek"
+                            android:textAlignment="center"
+                            android:textColor="@color/white1"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/user4"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:onClick="name4"
+                            android:src="@drawable/person"
+                            android:text="Player"
+                            app:civ_border_width="0dp" />
+
+                        <TextView
+                            android:id="@+id/user4TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/user4"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="10dp"
+                            android:text="Rahul"
+                            android:textAlignment="center"
+                            android:textColor="@color/white1"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/user5"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:visibility="gone"
+                            android:onClick="name5"
+                            android:src="@drawable/person"
+                            android:layout_centerHorizontal="true"
+                            android:text="Player"
+                            app:civ_border_width="0dp" />
+                        <TextView
+                            android:id="@+id/user5TV"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Naveepriya"
+                            android:layout_centerHorizontal="true"
+                            android:textAlignment="center"
+                            android:layout_below="@id/user5"
+                            android:textColor="@color/white1"
+                            android:layout_marginStart="10dp"
+                            android:textSize="13sp"/>
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/recentsBTN"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:onClick="recents"
+                            android:src="@drawable/ic_baseline_arrow_drop_down_circle_24"
+                            android:text="Player"
+                            app:civ_border_width="0dp" />
+
+                        <TextView
+                            android:id="@+id/recentsBTNTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/recentsBTN"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="10dp"
+                            android:text="RECENTS"
+                            android:textAlignment="center"
+                            android:textColor="@color/white1"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/tablerow"
+                    android:visibility="gone"
+                    android:padding="10dp">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/user8"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:onClick="name6"
+                            android:src="@drawable/person"
+                            android:text="Player"
+                            app:civ_border_width="0dp" />
+
+                        <TextView
+                            android:id="@+id/user8TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/user8"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="10dp"
+                            android:text="Subhash"
+                            android:textAlignment="center"
+                            android:textColor="@color/white1"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/user7"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:onClick="name7"
+                            android:src="@drawable/person"
+                            android:text="Player"
+                            app:civ_border_width="0dp" />
+
+                        <TextView
+                            android:id="@+id/user7TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/user7"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="10dp"
+                            android:text="Ramshankar"
+                            android:textAlignment="center"
+                            android:textColor="@color/white1"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        />
+                </TableRow>
+            </TableLayout>
+            <TextView
+                android:id="@+id/recent_use"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RECENTS"
+                android:visibility="invisible"
+                android:layout_below="@id/tableLayout"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white1"
+                android:onClick="showRecentUsers"
+                android:gravity="center_vertical"
+                android:enabled="false"
+                android:drawableRight="@drawable/arrow_up"
+                android:layout_marginStart="15dp"
+                android:textSize="13sp"
+                />
+
+            <TextView
+                android:id="@+id/recent_users"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tableLayout"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                android:onClick="showRecentUsers"
+                android:text="RECENTS"
+                android:textColor="@color/white1"
+                android:textSize="13sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recentsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/recent_use"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingBottom="40dp" />
+
+        </RelativeLayout>
+
+
+    </com.example.navpaytask.CustomScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/your_account" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.ReturnFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="vertical"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/TV1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="RETURNED"
+                android:textAlignment="center"
+                android:textColor="@color/black2"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/returnAmtTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TV1"
+                android:layout_alignStart="@id/TV1"
+                android:layout_marginTop="10dp"
+                android:text="₹38,139"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalAmtTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/returnAmtTV"
+                android:layout_alignStart="@id/returnAmtTV"
+                android:layout_marginTop="5dp"
+                android:text="of ₹42,812"
+                android:textColor="@color/black2"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/TV2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/totalAmtTV"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="UPCOMING"
+                android:textAlignment="center"
+                android:textColor="@color/black2"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/upcomingAmtTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TV2"
+                android:layout_alignStart="@id/TV2"
+                android:layout_marginTop="10dp"
+                android:text="₹4,632"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalAmtTV1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/upcomingAmtTV"
+                android:layout_alignStart="@id/upcomingAmtTV"
+                android:layout_marginTop="5dp"
+                android:text="of ₹42,812"
+                android:textColor="@color/black2"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/TV3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/totalAmtTV1"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="FRIENDS"
+                android:textAlignment="center"
+                android:textColor="@color/black2"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/freindsClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/TV3"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/arrow_up"
+                android:visibility="gone"
+                app:tint="@color/black1" />
+
+            <ImageView
+                android:id="@+id/progressImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/TV1"
+                android:layout_alignBottom="@id/totalAmtTV1"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/TV1"
+
+                />
+
+
+            <RelativeLayout
+                android:id="@+id/relate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TV3"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/person" />
+
+
+
+                <ImageView
+                    android:id="@+id/freindsOpen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/img1"
+                    android:src="@drawable/arrow_down"
+                    app:tint="@color/black1" />
+
+
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/freindsReturnRV"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/TV3"
+                android:layout_alignParentStart="true"
+                android:layout_margin="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>
